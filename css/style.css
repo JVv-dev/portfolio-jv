@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-color: rgb(238, 219, 208);
+    color: #333;
+    padding: 20px 50px; 
+}
+
+/* --- CABEÇALHO --- */
+header {
+    display: flex;
+    justify-content: space-between; /* Empurra o H1 para a esquerda e o Nav para a direita */
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px 0px; /* Formato de folha */
+}
+
+/* --- ÁREA PRINCIPAL --- */
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo, .descricao {
+    flex: 1; /* Distribui o espaço igualmente */
+}
+
+.titulo h2 {
+    font-size: 40px;
+}
+
+/* --- FOTO CENTRAL --- */
+.foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    box-shadow: -15px 15px 0px #d3d3d3; 
+}
+
+/* --- RODAPÉ --- */
+footer {
+    margin-top: 100px;
+    text-align: center;
+    color: #888;
+}
+
+/* Estilos para as páginas internas */
+.conteudo-paginas {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.item-formacao {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0b018d; 
+    box-shadow: 0 4px 6px rgba(56, 0, 209, 0.1);
+}
+
+/* --- FORMULÁRIO DE CONTATO --- */
+.formulario {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-enviar {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: #555;
+}
+
+.erro-oculto {
+    display: none;
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- HABILIDADES / PORTFÓLIO --- */
+.caixa-habilidades {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.habilidade {
+    margin-bottom: 20px;
+}
+
+.habilidade p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.barra-fundo {
+    width: 100%;
+    background-color: #e0e0e0; /* Cor da barra vazia */
+    border-radius: 10px;
+    height: 15px;
+    overflow: hidden;
+}
+
+.barra-nivel {
+    height: 100%;
+    background-color: #042453; /* Cor do preenchimento */
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+/* --- MODO ESCURO --- */
+.modo-escuro {
+    background-color: #000000;
+    color: #f4f4f9;
+}
+
+.modo-escuro nav a {
+    color: #f4f4f9;
+}
+.modo-escuro .item-formacao, 
+.modo-escuro .formulario, 
+.modo-escuro .projeto, 
+.modo-escuro .caixa-habilidades {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+/* Telas Menores */
+@media (max-width: 768px) {
+    /* Transforma as linhas principais em colunas empilhadas */
+    header, .apresentacao, .grade-portfolio {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Ajusta o menu para os links ficarem um embaixo do outro */
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Remove a margem esquerda no layout para PC */
+    nav a {
+        margin-left: 0;
+    }
+
+    /* Reduz o tamanho da foto no celular */
+    .foto img {
+        width: 200px;
+        height: 200px;
+    }
+}
