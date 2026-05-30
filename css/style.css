@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif; 
 }
-
 body {
     background-color: rgb(238, 219, 208);
     color: #333;
@@ -27,13 +26,25 @@ nav a {
     padding: 10px 25px;
     transition: 0.3s;
 }
-
-nav a:hover {
+nav a:hover{
     background-color: #333;
     color: #fff;
     border-radius: 20px 0px; /* Formato de folha */
 }
-
+.ico-buton{
+    width: 30px;
+    object-fit: contain;
+    border-radius: 20px 0px;
+}
+#btn-dark-mode{
+    background-color: rgb(238, 219, 208);
+    transition: 0.3s;
+    border: none;
+}
+#btn-dark-mode:hover{
+    background-color: #333;
+    border-radius: 20px 0px;
+}
 /* --- ÁREA PRINCIPAL --- */
 .apresentacao {
     display: flex;
@@ -173,7 +184,7 @@ footer {
 }
 /* --- MODO ESCURO --- */
 .modo-escuro {
-    background-color: #000000;
+    background-color: #000000be;
     color: #f4f4f9;
 }
 
@@ -183,9 +194,14 @@ footer {
 .modo-escuro .item-formacao, 
 .modo-escuro .formulario, 
 .modo-escuro .projeto, 
-.modo-escuro .caixa-habilidades {
+.modo-escuro .caixa-habilidades{
     background-color: #333;
     color: #f4f4f9;
+}
+/* Indicador de modo escuro ativo */
+.modo-escuro #btn-dark-mode{
+    background-color: #333;
+    border-radius: 20px 0px;
 }
 
 /* Telas Menores */
